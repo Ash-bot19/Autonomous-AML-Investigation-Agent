@@ -1,0 +1,41 @@
+# AML Investigation Agent — Python dependencies
+# Install with: pip install -r requirements.txt
+# All versions pinned with == for reproducibility (Decision D-10)
+
+# Core infra
+python-dotenv==1.0.1
+psycopg2-binary==2.9.9
+redis==5.0.3
+kafka-python-ng==2.2.3
+
+# Database migrations
+alembic==1.13.1
+SQLAlchemy==2.0.29
+
+# Logging
+structlog==24.1.0
+
+# API (stub in Phase 1, real in Phase 4)
+fastapi==0.110.1
+uvicorn==0.29.0
+
+# Dashboard (stub in Phase 1, real in Phase 6)
+streamlit==1.32.2
+pandas==2.2.1
+
+# Testing
+pytest==8.1.1
+pytest-asyncio==0.23.6
+
+# LangGraph (used from Phase 2)
+langgraph==0.0.55
+langchain-core==0.1.46
+
+# Schema validation — explicit pin required; langchain-core allows v1 which breaks model_validator(mode="after")
+pydantic>=2.0,<3
+
+# OpenAI (Phase 4 — gpt-4o-mini via structured output API)
+openai>=1.50.0  # 1.50+ required for beta.chat.completions.parse structured output
+
+# Observability (Phase 6)
+prometheus-client==0.20.0

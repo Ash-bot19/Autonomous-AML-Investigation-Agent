@@ -1,0 +1,41 @@
+# Runtime
+logs/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Credentials
+.env
+*.key
+*.pem
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# GSD planning (local-only)
+.planning/
+
+# Claude Code
+CLAUDE.md
+.claude/
